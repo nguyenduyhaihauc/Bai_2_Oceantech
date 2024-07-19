@@ -14,6 +14,7 @@ import duyndph34554.fpoly.bai_2.databinding.FragmentMainDishBinding
 import duyndph34554.fpoly.bai_2.viewModel.FoodViewModel
 
 
+//Fragment mon chinh
 class MainDishFragment : Fragment() {
     private var _binding: FragmentMainDishBinding? = null
     private val binding get() = _binding!!

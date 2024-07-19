@@ -41,7 +41,7 @@ class SideDishFragment : Fragment() {
 
 //        Xu ly
         binding.chkSideDish1.setOnCheckedChangeListener { _, isChecked ->
-            foodViewModel.updateCheckboxState("Dua tam hanh", isChecked)
+            foodViewModel.updateCheckboxState("Dau tam hanh", isChecked)
         }
 
         binding.chkSideDish2.setOnCheckedChangeListener { _, isChecked ->

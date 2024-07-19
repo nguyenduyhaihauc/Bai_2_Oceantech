@@ -12,6 +12,7 @@ import duyndph34554.fpoly.bai_2.databinding.FragmentBeverageBinding
 import duyndph34554.fpoly.bai_2.databinding.FragmentSelectedFoodBinding
 import duyndph34554.fpoly.bai_2.viewModel.FoodViewModel
 
+//Fragment hien thi danh sach nhung mon an da duoc chon
 class SelectedFoodFragment : Fragment() {
 
     private lateinit var viewModel: FoodViewModel

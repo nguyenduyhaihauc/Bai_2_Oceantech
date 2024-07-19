@@ -18,12 +18,14 @@ import duyndph34554.fpoly.bai_2.ui.theme.Bai_2Theme
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var navController: NavController
+//    lateinit duoc su dung de khai bao 1 thuoc tinh truoc khi su dung
+    private lateinit var navController: NavController //Quan ly cac thao tac dieu huong trong ung dung
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        supportFragmentManager quan ly cac Fragment trong 1 Activity
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
         navController = navHostFragment.navController

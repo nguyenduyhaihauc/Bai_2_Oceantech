@@ -12,6 +12,7 @@ import duyndph34554.fpoly.bai_2.databinding.FragmentDessertBinding
 import duyndph34554.fpoly.bai_2.viewModel.FoodViewModel
 
 
+// Fragment mon trang mieng
 class DessertFragment : Fragment() {
 
     private var _binding: FragmentDessertBinding? = null

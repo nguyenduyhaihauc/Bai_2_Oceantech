@@ -11,25 +11,32 @@ import duyndph34554.fpoly.bai_2.R
 import duyndph34554.fpoly.bai_2.databinding.FragmentBeverageBinding
 import duyndph34554.fpoly.bai_2.viewModel.FoodViewModel
 
+//Fragment do uong
+//Dai dien cho mot phan giao dien nguoi dung
 class BeverageFragment : Fragment() {
 
     private var _binding: FragmentBeverageBinding? = null
+    //Tra ve không null dung de truy cap cac thanh phan trong giao dien nguoi dung
     private val binding get() = _binding!!
 
     private lateinit var foodViewModel: FoodViewModel
 
+//    Duoc goi khi khoi tao va tra ve giao dien nguoi dung cho Fragment
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+//        Lien ket giao dien XML thong qua binding
         _binding = FragmentBeverageBinding.inflate(inflater, container, false)
-        return binding.root
+        return binding.root //Goc cua giao dien nguoi dung
     }
 
+//    Duoc goi khi Fragment duoc khoi tao xong
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+//    Cho phep chia se du lieu giua cac Fragment
         foodViewModel = ViewModelProvider(requireActivity())[FoodViewModel::class.java]
 
 //        Thiet lap trang thai checkBox
@@ -52,18 +59,21 @@ class BeverageFragment : Fragment() {
             foodViewModel.updateCheckboxState("Nuoc oi", isChecked)
         }
 
+//     Xu ly su kien nhan nut Next de den Fragment tiep theo
         binding.btnNextBeverage.setOnClickListener {
             findNavController().navigate(R.id.action_beverageFragment_to_selectedFoodFragment)
         }
 
+//    Quay tro lai trang truoc
         binding.btnBackBeverage.setOnClickListener {
             findNavController().popBackStack()
         }
     }
 
+//    Duoc goi khi Fragment bi pha huy
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        _binding = null // Tranh ro rỉ bo nho
     }
 
 }
